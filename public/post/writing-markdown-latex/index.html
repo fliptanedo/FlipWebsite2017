@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.26" />
+  <meta name="author" content="Flip Tanedo">
+  <meta name="description" content="Assistant Professor">
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/~flip/css/highlight.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono">
+  <link rel="stylesheet" href="/~flip/css/hugo-academic.css">
+  
+  <link rel="stylesheet" href="/~flip/css/green.css">
+  
+  <link rel="stylesheet" href="/~flip/css/flip2017.css">
+  
+  <link rel="stylesheet" href="/~flip/css/cryptedmail.css">
+  
+
+  
+
+  
+  
+  <script type="text/javascript">
+  <!--
+  var arxiv_authorid = "tanedo_p_1";
+  var arxiv_format = "arxiv";
+  var arxiv_max_entries = "";
+  var arxiv_includeComments = 0;
+  var arxiv_includeSubjects = 0;
+  var arxiv_includeJournalRef = 0;
+  </script>
+  <style type="text/css">
+  div.arxivfeed {margin-bottom: 5px; width:700px;}
+  </style>
+  <script type="text/javascript" src="https://arxiv.org/js/myarticles.js">
+  </script>
+  
+  
+
+  <link rel="alternate" href="http://physics.ucr.edu/~flip/index.xml" type="application/rss+xml" title="Flip Tanedo @ UCR">
+  <link rel="feed" href="http://physics.ucr.edu/~flip/index.xml" type="application/rss+xml" title="Flip Tanedo @ UCR">
+
+  <link rel="icon" type="image/png" href="/~flip/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/~flip/img/apple-touch-icon.png">
+
+
+  <link rel="canonical" href="http://physics.ucr.edu/~flip/post/writing-markdown-latex/">
+
+  
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+
+  <title>Writing content with Markdown, LaTeX, and Shortcodes | Flip Tanedo @ UCR</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+
+<div id="watermark" style="background-image:url('http://physics.ucr.edu/~flip//img/background/Bundle3.jpg');"></div>
+
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/~flip/">
+        Flip Tanedo @ UCR
+      </a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item" id="flip-nav-item">
+          <a href="/~flip/#aboutme">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item" id="flip-nav-item">
+          <a href="/~flip/#CV">
+            
+            <span>CV</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item" id="flip-nav-item">
+          <a href="/~flip/#research">
+            
+            <span>Research</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item" id="flip-nav-item">
+          <a href="/~flip/#teaching">
+            
+            <span>Teaching</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item" id="flip-nav-item">
+          <a href="/~flip/#outreach">
+            
+            <span>Activities</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item" id="flip-nav-item">
+          <a href="/~flip/#misc">
+            
+            <span>Misc.</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item" id="flip-nav-item">
+          <a href="/~flip/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+<div id="THECONTENT"> 
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name">Writing content with Markdown, LaTeX, and Shortcodes</h1>
+    
+    
+    <div class="article-style" itemprop="articleBody">
+      <p>Content can be written using <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">Markdown</a>, <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics" target="_blank">LaTeX math</a>, and <a href="http://gohugo.io/extras/shortcodes/" target="_blank">Hugo Shortcodes</a>. Additionally, HTML may be used for advanced formatting. This article gives an overview of the most common formatting options.</p>
+
+<h2 id="sub-headings">Sub-headings</h2>
+
+<pre><code>## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+</code></pre>
+
+<h2 id="emphasis">Emphasis</h2>
+
+<pre><code>Italics with *asterisks* or _underscores_.
+
+Bold with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough with ~~two tildes~~.
+</code></pre>
+
+<h2 id="ordered-lists">Ordered lists</h2>
+
+<pre><code>1. First item
+2. Another item
+</code></pre>
+
+<h2 id="unordered-lists">Unordered lists</h2>
+
+<pre><code>* First item
+* Another item
+</code></pre>
+
+<h2 id="images">Images</h2>
+
+<p>Images may be added to a page by placing them in your <code>static/img/</code> folder and referencing them using one of the following two notations:</p>
+
+<p>A general image:</p>
+
+<pre><code>![alternative text for search engines](/img/screenshot.png)
+</code></pre>
+
+<p>A numbered figure with caption:</p>
+
+<pre><code>{{&lt; figure src=&quot;/img/screenshot.png&quot; title=&quot;Figure Caption&quot; &gt;}}
+</code></pre>
+
+<h2 id="links">Links</h2>
+
+<pre><code>[I'm a link](https://www.google.com)
+[A post]({{&lt; ref &quot;post/hi.md&quot; &gt;}})
+[A publication]({{&lt; ref &quot;publication/hi.md&quot; &gt;}})
+[A project]({{&lt; ref &quot;project/hi.md&quot; &gt;}})
+[Another section]({{&lt; relref &quot;hi.md#who&quot; &gt;}})
+</code></pre>
+
+<h2 id="emojis">Emojis</h2>
+
+<p>See the <a href="http://www.webpagefx.com/tools/emoji-cheat-sheet/" target="_blank">Emoji cheat sheet</a> for available emoticons. The following serves as an example, but you should remove the spaces between each emoji name and pair of semicolons:</p>
+
+<pre><code>I : heart : Academic : smile :
+</code></pre>
+
+<p>I ❤️ Academic 😄</p>
+
+<h2 id="blockquote">Blockquote</h2>
+
+<pre><code>&gt; This is a blockquote.
+</code></pre>
+
+<blockquote>
+<p>This is a blockquote.</p>
+</blockquote>
+
+<h2 id="footnotes">Footnotes</h2>
+
+<pre><code>I have more [^1] to say.
+
+[^1]: Footnote example.
+</code></pre>
+
+<p>I have more <sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup> to say.</p>
+
+<h2 id="code-highlighting">Code highlighting</h2>
+
+<p>Pass the <em>language</em> of the code, such as <code>python</code>, as a parameter after three backticks:</p>
+
+<pre><code>```python
+# Example of code highlighting
+input_string_var = input(&quot;Enter some data: &quot;)
+print(&quot;You entered: {}&quot;.format(input_string_var))
+```
+</code></pre>
+
+<p>Result:</p>
+
+<pre><code class="language-python"># Example of code highlighting
+input_string_var = input(&quot;Enter some data: &quot;)
+print(&quot;You entered: {}&quot;.format(input_string_var))
+</code></pre>
+
+<h3 id="highlighting-options">Highlighting options</h3>
+
+<p>The Academic theme uses <a href="https://highlightjs.org" target="_blank">highlight.js</a> for source code highlighting, and highlighting is enabled by default for all pages. However, several configuration options are supported that allow finer-grained control over highlight.js.</p>
+
+<p>The following table lists the supported options for configuring highlight.js, along with their expected type and a short description. A &ldquo;yes&rdquo; in the <strong>config.toml</strong> column means the value can be set globally in <code>config.toml</code>, and a &ldquo;yes&rdquo; in the <strong>preamble</strong> column means that the value can be set locally in a particular page&rsquo;s preamble.</p>
+
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>type</th>
+<th>description</th>
+<th>config.toml</th>
+<th>preamble</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>highlight</code></td>
+<td>boolean</td>
+<td>enable/disable highlighting</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+
+<tr>
+<td><code>highlight_languages</code></td>
+<td>slice</td>
+<td>choose additional languages</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+
+<tr>
+<td><code>highlight_style</code></td>
+<td>string</td>
+<td>choose a highlighting style</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+
+<tr>
+<td><code>highlight_version</code></td>
+<td>string</td>
+<td>choose the highlight.js version</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="option-highlight">Option <code>highlight</code></h4>
+
+<p>The <code>highlight</code> option allows enabling or disabling the inclusion of highlight.js, either globally or for a particular page. If the option is unset, it has the same effect as if you had specified <code>highlight = true</code>. That is, the highlight.js javascript and css files will be included in every page. If you&rsquo;d like to only include highlight.js files on pages that actually require source code highlighting, you can set <code>highlight = false</code> in <code>config.toml</code>, and then override it by setting <code>highlight = true</code> in the preamble of any pages that require source code highlighting. Conversely, you could enable highlighting globally, and disable it locally for pages that do not require it. Here is a table that shows whether highlighting will be enabled for a page, based on the values of <code>highlight</code> set in <code>config.toml</code> and/or the page&rsquo;s preamble.</p>
+
+<table>
+<thead>
+<tr>
+<th>config.toml</th>
+<th>page preamble</th>
+<th>highlighting enabled for page?</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>unset or true</td>
+<td>unset or true</td>
+<td>yes</td>
+</tr>
+
+<tr>
+<td>unset or true</td>
+<td>false</td>
+<td>no</td>
+</tr>
+
+<tr>
+<td>false</td>
+<td>unset or false</td>
+<td>no</td>
+</tr>
+
+<tr>
+<td>false</td>
+<td>true</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="option-highlight-languages">Option <code>highlight_languages</code></h4>
+
+<p>The <code>highlight_languages</code> option allows you to specify additional languages that are supported by highlight.js, but are not considered &ldquo;common&rdquo; and therefore are not supported by default. For example, if you want source code highlighting for Go and clojure in all pages, set <code>highlight_languages = [&quot;go&quot;, &quot;clojure&quot;]</code> in <code>config.toml</code>. If, on the other hand, you want to enable a language only for a specific page, you can set <code>highlight_languages</code> in that page&rsquo;s preamble.</p>
+
+<p>The <code>highlight_languages</code> options specified in <code>config.toml</code> and in a page&rsquo;s preamble are additive. That is, if <code>config.toml</code> contains, <code>highlight_languages = [&quot;go&quot;]</code> and the page&rsquo;s preamble contains <code>highlight_languages = [&quot;ocaml&quot;]</code>, then javascript files for <em>both</em> go and ocaml will be included for that page.</p>
+
+<p>If the <code>highlight_languages</code> option is set, then the corresponding javascript files will be served from the <a href="https://cdnjs.com/libraries/highlight.js/" target="_blank">cdnjs server</a>. To see a list of available languages, visit the <a href="https://cdnjs.com/libraries/highlight.js/" target="_blank">cdnjs page</a> and search for links with the word &ldquo;languages&rdquo;.</p>
+
+<p>The <code>highlight_languages</code> option provides an easy and convenient way to include support for additional languages to be severed from a CDN. If serving unmodified files from cdnjs doesn&rsquo;t meet your needs, you can include javascript files for additional language support via one of the methods described in the <a href="http://physics.ucr.edu/~flip/post/getting-started/#third-party-and-local-scripts-js" target="_blank">getting started guide</a>.</p>
+
+<h4 id="option-highlight-style">Option <code>highlight_style</code></h4>
+
+<p>The <code>highlight_style</code> option allows you to select an alternate css style for highlighted code. For example, if you wanted to use the solarized-dark style, you could set <code>highlight_style = &quot;solarized-dark&quot;</code> in <code>config.toml</code>.</p>
+
+<p>If the <code>highlight_style</code> option is unset, the default is to use the file <code>/css/highlight.min.css</code>, either the one provided by the Academic theme, or else the one in your local <code>static</code> directory.  The <code>/css/highlight.min.css</code> file provided by Academic is equivalent to the <code>github</code> style from highlight.js.</p>
+
+<p>If the <code>highlight_style</code> option <em>is</em> set, then <code>/css/highlight.min.css</code> is ignored, and the corresponding css file will be served from the <a href="https://cdnjs.com/libraries/highlight.js/" target="_blank">cdnjs server</a>. To see a list of available styles, visit the <a href="https://cdnjs.com/libraries/highlight.js/" target="_blank">cdnjs page</a> and search for links with the word &ldquo;styles&rdquo;.</p>
+
+<p>See the <a href="https://highlightjs.org/static/demo/" target="_blank">highlight.js demo page</a> for examples of available styles.</p>
+
+<div class="alert alert-note">
+  <p>Not all styles listed on the <a href="https://highlightjs.org/static/demo/" target="_blank">highlight.js demo page</a> are available from the <a href="https://cdnjs.com/libraries/highlight.js/" target="_blank">cdnjs server</a>. If you want to use a style that is not served by cdnjs, just leave <code>highlight_style</code> unset, and place the corresponding css file in <code>/static/css/highlight.min.css</code>.</p>
+
+</div>
+
+
+<div class="alert alert-note">
+  <p>If you don&rsquo;t want to change the default style that ships with Academic but you do want the style file served from the <a href="https://cdnjs.com/libraries/highlight.js/" target="_blank">cdnjs server</a>, set <code>highlight_style = &quot;github&quot;</code> in <code>config.toml</code>.</p>
+
+</div>
+
+
+<p>The <code>highlight_style</code> option is only recognized when set in <code>config.toml</code>. Setting <code>highlight_style</code> in your page&rsquo;s preamble has no effect.</p>
+
+<h4 id="option-highlight-version">Option <code>highlight_version</code></h4>
+
+<p>The <code>highlight_version</code> option, as the name implies, allows you to select the version of highlight.js you want to use. The default value is &ldquo;9.9.0&rdquo;. The <code>highlight_version</code> option is only recognized when set in <code>config.toml</code>. Setting <code>highlight_version</code> in your page&rsquo;s preamble has no effect.</p>
+
+<h2 id="twitter-tweet">Twitter tweet</h2>
+
+<p>To include a single tweet, pass the tweet’s ID from the tweet&rsquo;s URL as parameter to the shortcode:</p>
+
+<pre><code>{{&lt; tweet 666616452582129664 &gt;}}
+</code></pre>
+
+<h2 id="youtube">Youtube</h2>
+
+<pre><code>{{&lt; youtube w7Ft2ymGmfc &gt;}}
+</code></pre>
+
+<h2 id="vimeo">Vimeo</h2>
+
+<pre><code>{{&lt; vimeo 146022717 &gt;}}
+</code></pre>
+
+<h2 id="github-gist">GitHub gist</h2>
+
+<pre><code>{{&lt; gist USERNAME GIST-ID  &gt;}}
+</code></pre>
+
+<h2 id="speaker-deck">Speaker Deck</h2>
+
+<pre><code>{{&lt; speakerdeck 4e8126e72d853c0060001f97 &gt;}}
+</code></pre>
+
+<h2 id="rm-latex-math">$\rm \LaTeX$ math</h2>
+
+<pre><code class="language-TeX">$$\left [ – \frac{\hbar^2}{2 m} \frac{\partial^2}{\partial x^2} + V \right ] \Psi = i \hbar \frac{\partial}{\partial t} \Psi$$
+</code></pre>
+
+<p>$$\left [ – \frac{\hbar^2}{2 m} \frac{\partial^2}{\partial x^2} + V \right ] \Psi = i \hbar \frac{\partial}{\partial t} \Psi$$</p>
+
+<p>Alternatively, inline math can be written by wrapping the formula with only a single <code>$</code>:</p>
+
+<pre><code>This is inline: $\mathbf{y} = \mathbf{X}\boldsymbol\beta + \boldsymbol\varepsilon$
+</code></pre>
+
+<p>This is inline: $\mathbf{y} = \mathbf{X}\boldsymbol\beta + \boldsymbol\varepsilon$</p>
+
+<h2 id="table">Table</h2>
+
+<p>Code:</p>
+
+<pre><code class="language-Markdown">| Command           | Description                    |
+| ------------------| ------------------------------ |
+| `hugo`            | Build your website.            |
+| `hugo serve -w`   | View your website.             |
+</code></pre>
+
+<p>Result:</p>
+
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>hugo</code></td>
+<td>Build your website.</td>
+</tr>
+
+<tr>
+<td><code>hugo serve -w</code></td>
+<td>View your website.</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="alerts">Alerts</h2>
+
+<p>Alerts are a useful feature that add side content such as tips, notes, or warnings to your articles. They are especially handy when writing educational tutorial-style articles. Use the corresponding shortcodes to enable alerts inside your content:</p>
+
+<pre><code>{{% alert note %}}
+Here's a tip or note...
+{{% /alert %}}
+</code></pre>
+
+<p>This will display the following <em>note</em> block:</p>
+
+<div class="alert alert-note">
+  <p>Here&rsquo;s a tip or note&hellip;</p>
+
+</div>
+
+
+<pre><code>{{% alert warning %}}
+Here's some important information...
+{{% /alert %}}
+</code></pre>
+
+<p>This will display the following <em>warning</em> block:</p>
+
+<div class="alert alert-warning">
+  <p>Here&rsquo;s some important information&hellip;</p>
+
+</div>
+
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">Footnote example.
+ <a class="footnote-return" href="#fnref:1"><sup>^</sup></a></li>
+</ol>
+</div>
+    </div>
+  </div>
+
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="http://physics.ucr.edu/~flip/post/migrate-from-jekyll/"><span
+      aria-hidden="true">&larr;</span> Migrate from Jekyll to Hugo</a></li>
+    
+
+    
+    <li class="next"><a href="http://physics.ucr.edu/~flip/post/managing-content/">Managing content <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+
+</div>
+
+<div style="position: relative; width: 0; height: 0">
+    <div id="feynmanfoot" style="background-image:url('http://physics.ucr.edu/~flip//img/background/feynmanfooter.png');"></div>
+</div>
+<div id="botbar1"></div>
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Flip Tanedo &middot; 
+
+      Adapted from the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </div>
+</footer>
+</div> 
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.2/imagesloaded.pkgd.min.js" integrity="sha512-iHzEu7GbSc705hE2skyH6/AlTpOfBmkx7nUqTLGzPYR+C1tRaItbRlJ7hT/D3YQ9SV0fqLKzp4XY9wKulTBGTw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js" integrity="sha512-Z5heTz36xTemt1TbtbfXtTq5lMfYnOkXM2/eWcTTiLU01+Sw4ku1i7vScDc8fWhrP2abz9GQzgKH5NGBLoYlAw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js" integrity="sha512-CDeU7pRtkPX6XJtF/gcFWlEwyaX7mcAp5sO3VIu/ylsdR74wEw4wmBpD5yYTrmMAiAboi9thyBUr1vXRPA7t0Q==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    <script src="/~flip/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+    
+
+  </body>
+</html>
+

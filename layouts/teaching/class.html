@@ -1,0 +1,87 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+<div itemscope itemtype="http://schema.org/Course">
+
+  {{ partial "header_image.html" . }}
+
+  <div class="container pub-title">
+    <h1 itemprop="name">{{ .Params.subtitle }}</h1>
+    <h2 itemprop="course-number" >{{ .Params.university }} {{ .Title }}, {{ .Params.term }} {{ .Params.year }}</h2>
+    <!-- <h2 itemprop="semester">{{ .Params.instructor }}, {{ .Params.term }} {{ .Params.year }}</h1> -->
+  </div>
+
+</div>
+<div class="article-container">
+
+  {{ if .Params.image }}
+  <img src="{{ "/img/" | relURL }}{{ .Params.image }}" class="pub-banner" itemprop="image">
+  {{end}}
+
+
+  {{ range .Params.teachinfo }}
+  <b>{{ .info }}</b>: {{ .value }}
+      <span id="person-email" itemprop="email">
+        (<a data-name="{{ .email1 }}" data-domain="{{ .email2 }}" data-tld="{{ .email3 }}" href="#" class="cryptedmail" onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld"></a>)
+      </span>
+      <span class="comment">({{ .office }})</span>
+    <br />
+  {{ end }}
+
+
+
+<!--  -->
+
+<h3>Textbooks</h3>
+
+<!-- [[textbook]]
+  title = "Mathematics of Classical and Quantum Physics"
+  author = "Byron and Fuller"
+  url = "http://store.doverpublications.com/048667164x.html"
+  comment = "Optional." -->
+
+{{ range .Params.textbook }}
+  <i class="fa fa-book"></i>&ensp;
+  <i><a href="{{ .url }}">{{ .title }}</a></i>,
+  {{ .author }}.
+  <span class="comment">{{ .comment }}</span>
+  <br />
+{{ end }}
+<!-- ****  -->
+
+
+<h3>Course Information</h3>
+
+
+  <div class="row">
+    <div class="col-sm-1"></div> <!-- SPACING -->
+    <div class="col-sm-10"> <!-- "col-sm-10" -->
+      {{ range .Params.courseinfo }}
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 pub-row-heading">
+          <b class="comment">{{ .info }}:</b>
+        </div> <!-- "col-xs-12 col-sm-3 pub-row-heading" -->
+        <div class="col-xs-12 col-sm-9">
+          {{ .value }}
+          <span class="comment">{{ .comment }}</span>
+        </div> <!-- "col-xs-12 col-sm-9" -->
+      </div> <!-- "row" -->
+      {{ end }}
+    </div><!-- "col-sm-10" -->
+    <div class="col-sm-1"></div> <!-- SPACING -->
+  </div> <!-- "row" -->
+  <div class="visible-xs space-below"></div>
+
+
+
+  <div class="space-below"></div>
+
+  <div class="article-style">{{ .Content }}</div>
+
+</div>
+
+<div class="container">
+  {{ partial "section_pager.html" . }}
+</div>
+
+{{ partial "footer_container.html" . }}
+{{ partial "footer.html" . }}

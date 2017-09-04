@@ -1,0 +1,24 @@
+<div style="position: relative; width: 0; height: 0">
+    <div id="feynmanfoot" style="background-image:url('{{ $.Site.BaseURL }}/img/{{ .Site.Params.footmark }}');"></div>
+</div>
+<div id="botbar1"></div>
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      {{ with .Site.Copyright }}{{ . | markdownify}} &middot; {{ end }}
+
+      Adapted from the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </div>
+</footer>
+</div> <!--  ends id=#THECONTENT from navbar.html; see flip2017.css -->

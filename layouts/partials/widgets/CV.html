@@ -1,0 +1,77 @@
+{{ $page := .page }}
+
+<!-- Custom widget -->
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>{{ with $page.Title }}{{ . | markdownify }}{{ end }}</h1>
+    {{ with $page.Params.subtitle }}<p>{{ . | markdownify }}</p>{{ end }}
+
+    <p>
+    <a class="btn btn-primary btn-outline btn-xs" href="{{ $page.Params.cv_pdf }}">
+      Download Complete CV
+    </a>
+    <!-- Group -->
+    <!-- <a class="btn btn-primary btn-outline btn-xs" href="{{ $page.Params.cv_pdf }}">
+      {{ $page.Params.group_name }}
+    </a> -->
+    </p>
+
+    <!-- FLIP: PLACE GROUP LOGO -->
+    <!-- <p style="text-align: center;"> --><p>
+    <img class="sidebarpic" src="{{ $page.Params.group_logo }}">
+    <meta itemprop="image" content="{{ $page.Params.group_logo }}">
+    </p>
+    <!-- END GROUP LOGO -->
+
+
+  </div>
+  <div class="col-xs-12 col-md-8">
+    {{ $page.Content }}
+
+
+<!-- FLIP: HONORS AND AWARDS -->
+    <div class="row">
+          {{ with $page.Params.honor }}
+            <ul class="ul-honors">
+              {{ range .fellowships }}
+              <li>{{ .name }}, {{ .years }}</li>
+              {{ end }}
+            </ul>
+          {{ end }}
+      </div>
+
+<!-- ADAPTED FROM about.html -->
+    <div class="row">
+
+          {{ with $page.Params.interests }}
+          <div class="col-sm-5">
+            <h3>{{ i18n "interests" | markdownify }}</h3>
+            <ul class="ul-interests">
+              {{ range .interests }}
+              <li>{{ . }}</li>
+              {{ end }}
+            </ul>
+          </div>
+          {{ end }}
+
+          {{ with $page.Params.education }}
+          <div class="col-sm-7">
+            <h3>{{ i18n "education" | markdownify }}</h3>
+            <ul class="ul-edu fa-ul">
+              {{ range .courses }}
+              <li>
+                <i class="fa-li fa fa-graduation-cap"></i>
+                <div class="description">
+                  <p class="course">{{ .course }}{{ with .year }}, {{ . }}{{ end }}</p>
+                  <p class="institution">{{ .institution }}</p>
+                </div>
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+          {{ end }}
+
+      </div>
+
+  </div>
+</div>

@@ -1,0 +1,250 @@
+# baseurl = "https://physics.ucr.edu/"  # End your URL with a `/` trailing slash.
+baseurl = "http://physics.ucr.edu/~flip/"   # End your URL with a `/` trailing slash.
+title = "Flip Tanedo @ UCR"
+copyright = "&copy; 2017 Flip Tanedo" 
+theme = "academic"
+enableEmoji = true
+footnotereturnlinkcontents = "<sup>^</sup>"
+
+# Enable comments by entering your Disqus shortname
+disqusShortname = ""
+
+# Enable analytics by entering your Google Analytics tracking ID
+googleAnalytics = ""
+
+# Default language to use (if you setup multilingual support)
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+[blackfriday]
+  hrefTargetBlank = true
+
+[params]
+  name = "Flip Tanedo"
+  role = "Assistant Professor"
+  organization = "UC Riverside Particle Theory"
+  organization_url = "http://theory.ucr.edu"
+  gravatar = false
+  avatar = "Profile/Flip600_sq.jpg"  # (in `static/img/` folder)
+  # email = "flip.tanedo@ucr.edu" # Use crypted e-mail fields below
+  email1 = "flip.tanedo"
+  email2 = "ucr"
+  email3 = "edu"
+  address = "Physics Building, Room 3054, University of California, 900 University Ave., Riverside, CA 92521, USA"
+  office_hours = "Office Hours: Monday 1:30 to 2:30pm"
+  # phone = "(951) 827-6168"
+  # skype = "flip.tanedo"
+  telegram = ""
+
+# FLIP additional
+  watermark = "background/Bundle3.jpg" # relative to `static/img/` folder)
+  footmark = "background/feynmanfooter.png"
+  numitems = "3" # number of recent items to show, e.g. recent and upcoming classes
+  arXivID = "tanedo_p_1"
+# END FLIP ADDITION
+
+  # Enable Keybase in Contact section by entering your keybase.io username.
+  keybase = ""
+
+  # Date format (refer to Go's date format: http://flippinggodateformat.com )
+  #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
+  date_format = "Mon, Jan 2, 2006"
+
+  # Enable global LaTeX math rendering?
+  #   If false, you can enable it locally on a per page basis.
+  math = true
+
+  # Highlight.js options
+  #   highlight
+  #     Enable global source code highlighting?  If false, you can
+  #     override it for a particular page in that page's preamble.
+  #
+  #     Example: highlight = true
+  #
+  #   highlight_languages
+  #     Add support for highlighting additional languages. Support for
+  #     languages mentioned here will be included in all pages. You
+  #     can also set this variable for a particular page in that
+  #     page's preamble.
+  #
+  #     Example: highlight_languages = ["go", "lisp", "ocaml"]
+  #
+  #   highlight_style
+  #     Choose a different CSS style for highlighting source
+  #     code. Setting this option in a page's preamble has no
+  #     effect.
+  #
+  #     Example: highlight_style = "github-gist"
+  #
+  #   highlight_version
+  #     Choose the version of highlight.js you want. Setting this
+  #     option in a page's preamble has no effect.
+  #
+  #     Example: highlight_version = "9.9.0"
+  #
+  #   For the list of supported languages, styles, and versions, see:
+  #   https://cdnjs.com/libraries/highlight.js/
+  #
+  #   For more info on the highlighting options, see:
+  #   https://gcushen.github.io/hugo-academic-demo/post/writing-markdown-latex/#highlighting-options
+  highlight = true
+  highlight_languages = []
+  # highlight_style = "github"
+  # highlight_version = "9.9.0"
+
+  # Enable native social sharing buttons?
+  sharing = true
+
+  # Link custom CSS and JS assets
+  #   (relative to /static/css and /static/js respectively)
+  custom_css = ["green.css", "flip2017.css", "cryptedmail.css"]
+  custom_js  = []
+
+  # Publication types.
+  #   Used to categorize publications.
+  #   The index of the publication type in the list is used as its unique numerical identifier.
+  #   The numeric ID is used in a publication's frontmatter to categorize it.
+  #   The language can be edited below.
+  #   For multi-lingual sites, copy this block to each language section at the end of this file.
+  publication_types = [
+    'Uncategorized',  # 0
+    'Conference proceedings',  # 1
+    'Journal',  # 2
+    'Work in progress',  # 3
+    'Technical report',  # 4
+    'Book',  # 5
+    'Book chapter'  # 6
+  ]
+
+  # Social/Academic Networking
+  #
+  # Icon pack "fa" includes the following social network icons:
+  #
+  #   twitter, weibo, linkedin, github, facebook, pinterest, google-plus,
+  #   youtube, instagram, soundcloud
+  #
+  #   For email icon, use "fa" icon pack, "envelope" icon, and
+  #   "mailto:your@email.com" as the link.
+  #
+  #   Full list: https://fortawesome.github.io/Font-Awesome/icons/
+  #
+  # Icon pack "ai" includes the following academic network icons:
+  #
+  #   google-scholar, arxiv, orcid, researchgate, mendeley
+  #
+  #   Full list: https://jpswalsh.github.io/academicons/
+
+  # [[params.social]]
+  #   icon = "envelope"
+  #   icon_pack = "fa"
+  #   link = "mailto:flip.tanedo@ucr.edu"
+
+  [[params.social]]
+    icon = "inspire"
+    icon_pack = "ai"
+    link = "http://inspirehep.net/author/profile/P.Tanedo.1"
+    cv = true
+
+  [[params.social]]
+    icon = "google-scholar"
+    icon_pack = "ai"
+    link = "https://scholar.google.com/citations?hl=en&user=BQuJtTIAAAAJ&view_op=list_works&sortby=pubdate"
+    cv = true
+
+  [[params.social]]
+    icon = "orcid"
+    icon_pack = "ai"
+    link = "http://orcid.org/0000-0003-4642-2199"
+    cv = true
+
+
+  [[params.social]]
+    icon = "github"
+    icon_pack = "fa"
+    link = "//github.com/fliptanedo"
+    cv = true
+
+
+  [[params.social]]
+    icon = "twitter"
+    icon_pack = "fa"
+    link = "//twitter.com/FlipTanedo"
+    cv = false
+
+  [[params.social]]
+    icon = "arxiv"
+    icon_pack = "ai"
+    link = "https://arxiv.org/find/hep-ph/1/au:+Tanedo_P/0/1/0/all/0/1"
+    cv = true
+
+  [[params.social]]
+    icon = "publons"
+    icon_pack = "ai"
+    link = "https://publons.com/author/637273/philip-tanedo#profile"
+    cv = true
+
+  [[params.social]]
+    icon = "slideshare"
+    icon_pack = "fa"
+    link = "https://www.slideshare.net/fliptanedo"
+    cv = false
+
+  [[params.social]]
+    icon = "tree"
+    icon_pack = "fa"
+    link = "https://academictree.org/physics/tree.php?pid=715850"
+    cv = false
+
+
+# Navigation Links
+#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
+#     desired widget in your `content/home/` folder.
+#   The weight parameter defines the order that the links will appear in.
+
+[[menu.main]]
+  name = "Home"
+  url = "#aboutme"
+  weight = 1
+
+[[menu.main]]
+  name = "CV"
+  url = "#CV"
+  weight = 2
+
+[[menu.main]]
+  name = "Research"
+  url = "#research"
+  weight = 3
+
+[[menu.main]]
+  name = "Teaching"
+  url = "#teaching"
+  weight = 4
+
+[[menu.main]]
+  name = "Activities"
+  url = "#outreach"
+  weight = 5
+
+[[menu.main]]
+  name = "Misc."
+  url = "#misc"
+  weight = 6
+
+[[menu.main]]
+  name = "Contact"
+  url = "#contact"
+  weight = 7
+
+# Taxonomies.
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  publication_type = "publication_types"
+
+# Languages
+#   Create a [languages.X] block for each language you want, where X is the language ID.
+
+# Configure the English version of the website.
+[languages.en]
+  languageCode = "en-us"

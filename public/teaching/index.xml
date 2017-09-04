@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Courses Taught on Flip Tanedo @ UCR</title>
+    <link>http://physics.ucr.edu/~flip/teaching/</link>
+    <description>Recent content in Courses Taught on Flip Tanedo @ UCR</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Flip Tanedo</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/~flip/teaching/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>P177</title>
+      <link>http://physics.ucr.edu/~flip/teaching/p177_2018/</link>
+      <pubDate>Fri, 20 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://physics.ucr.edu/~flip/teaching/p177_2018/</guid>
+      <description>&lt;p&gt;This page will be filled in.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>P165</title>
+      <link>http://physics.ucr.edu/~flip/teaching/p165_2018/</link>
+      <pubDate>Sat, 20 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://physics.ucr.edu/~flip/teaching/p165_2018/</guid>
+      <description>&lt;p&gt;This course is supported by the UCR Library&amp;rsquo;s Affordable Course Material Initiative. Our primary resource will be publicly available materials and lecture notes that are posted online.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>P231</title>
+      <link>http://physics.ucr.edu/~flip/teaching/p231_2017/</link>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://physics.ucr.edu/~flip/teaching/p231_2017/</guid>
+      <description>&lt;p&gt;This page will be filled in.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

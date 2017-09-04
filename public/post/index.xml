@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Flip Tanedo @ UCR</title>
+    <link>http://physics.ucr.edu/~flip/post/</link>
+    <description>Recent content in Posts on Flip Tanedo @ UCR</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Flip Tanedo</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/~flip/post/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Getting started with the Academic framework for Hugo</title>
+      <link>http://physics.ucr.edu/~flip/post/getting-started/</link>
+      <pubDate>Wed, 20 Apr 2016 12:00:00 +0000</pubDate>
+      
+      <guid>http://physics.ucr.edu/~flip/post/getting-started/</guid>
+      <description>
+
+&lt;p&gt;The Academic framework enables you to easily create a beautifully simple personal or academic website using the &lt;a href=&#34;https://gohugo.io&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt; static site generator.&lt;/p&gt;
+
+&lt;p&gt;Key features:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Easily manage your homepage, blog posts, publications, talks, and projects&lt;/li&gt;
+&lt;li&gt;Configurable widgets available for Biography, Publications, Projects, News/Blog, Talks, and Contact&lt;/li&gt;
+&lt;li&gt;Need a different section? Just use the Custom widget!&lt;/li&gt;
+&lt;li&gt;Write in &lt;a href=&#34;http://physics.ucr.edu/~flip/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;Markdown&lt;/a&gt; for easy formatting and code highlighting, with &lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34; target=&#34;_blank&#34;&gt;LaTeX&lt;/a&gt; for mathematical expressions&lt;/li&gt;
+&lt;li&gt;Social/academic network linking, &lt;a href=&#34;https://analytics.google.com&#34; target=&#34;_blank&#34;&gt;Google Analytics&lt;/a&gt;, and &lt;a href=&#34;https://disqus.com&#34; target=&#34;_blank&#34;&gt;Disqus&lt;/a&gt; comments&lt;/li&gt;
+&lt;li&gt;Responsive and mobile friendly&lt;/li&gt;
+&lt;li&gt;Simple and refreshing one page design&lt;/li&gt;
+&lt;li&gt;Easy to customize&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://georgecushen.com/create-your-website-with-hugo/#installing-hugo&#34; target=&#34;_blank&#34;&gt;Install Hugo&lt;/a&gt; and create a new website by typing the following commands in your &lt;em&gt;Terminal&lt;/em&gt; or &lt;em&gt;Command Prompt&lt;/em&gt; app:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo new site my_website
+cd my_website
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Install Academic with &lt;a href=&#34;https://help.github.com/articles/set-up-git/&#34; target=&#34;_blank&#34;&gt;git&lt;/a&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/gcushen/hugo-academic.git themes/academic
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or alternatively, &lt;a href=&#34;https://github.com/gcushen/hugo-academic/archive/master.zip&#34; target=&#34;_blank&#34;&gt;download Academic&lt;/a&gt; and extract it into a &lt;code&gt;themes/academic&lt;/code&gt; folder within your Hugo website.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;If you are creating a new website, copy the contents of the &lt;code&gt;exampleSite&lt;/code&gt; folder to your website root folder, overwriting existing files if necessary. The &lt;code&gt;exampleSite&lt;/code&gt; folder contains an example config file and content to help you get started.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cp -av themes/academic/exampleSite/* .
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Start the Hugo server from your website root folder:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo server --watch
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you can go to &lt;a href=&#34;http://localhost:1313&#34; target=&#34;_blank&#34;&gt;localhost:1313&lt;/a&gt; and your new Academic powered website should appear.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Customize your website - refer to the &lt;em&gt;Getting Started&lt;/em&gt; section below&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Build your site by running the &lt;code&gt;hugo&lt;/code&gt; command. Then &lt;a href=&#34;https://georgecushen.com/create-your-website-with-hugo/&#34; target=&#34;_blank&#34;&gt;host it for free using Github Pages&lt;/a&gt;. Or alternatively, copy the generated &lt;code&gt;public/&lt;/code&gt; directory (by FTP, Rsync, etc.) to your production web server (such as your university&amp;rsquo;s hosting service).&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+
+&lt;p&gt;Assuming you created a new website with the example content following the installation steps above, this section explores just a few more steps in order to customize it.&lt;/p&gt;
+
+&lt;h3 id=&#34;core-parameters&#34;&gt;Core parameters&lt;/h3&gt;
+
+&lt;p&gt;The core parameters for the website can be edited in the &lt;code&gt;config.toml&lt;/code&gt; configuration file:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Set &lt;code&gt;baseurl&lt;/code&gt; to your website URL (we recommend &lt;a href=&#34;https://georgecushen.com/create-your-website-with-hugo/&#34; target=&#34;_blank&#34;&gt;GitHub Pages&lt;/a&gt; for free hosting)&lt;/li&gt;
+&lt;li&gt;Set &lt;code&gt;title&lt;/code&gt; to your desired website title such as your name&lt;/li&gt;
+&lt;li&gt;The example Disqus commenting variable should be cleared (e.g. &lt;code&gt;disqusShortname = &amp;quot;&amp;quot;&lt;/code&gt;) or set to your own &lt;a href=&#34;https://disqus.com/&#34; target=&#34;_blank&#34;&gt;Disqus&lt;/a&gt; shortname to enable commenting&lt;/li&gt;
+&lt;li&gt;Edit your details under &lt;code&gt;[params]&lt;/code&gt;; these will be displayed mainly in the homepage &lt;em&gt;about&lt;/em&gt; and &lt;em&gt;contact&lt;/em&gt; widgets (if used). To disable a contact field, simply clear the value to &lt;code&gt;&amp;quot;&amp;quot;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Place a square cropped portrait photo named &lt;code&gt;portrait.jpg&lt;/code&gt; into the &lt;code&gt;static/img/&lt;/code&gt; folder, overwriting any defaults. Alternatively, you can edit the &lt;code&gt;avatar&lt;/code&gt; filepath to point to a different image name or clear the value to disable the avatar feature.&lt;/li&gt;
+&lt;li&gt;To enable LaTeX math for your site, set &lt;code&gt;math = true&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Social/academic networking links are defined as multiples of &lt;code&gt;[[params.social]]&lt;/code&gt;. They can be created or deleted as necessary.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;introduce-yourself&#34;&gt;Introduce yourself&lt;/h3&gt;
+
+&lt;p&gt;Edit your biography in the &lt;em&gt;about&lt;/em&gt; widget &lt;code&gt;content/home/about.md&lt;/code&gt; that you copied across from the &lt;code&gt;themes/academic/exampleSite/&lt;/code&gt; folder. The research interests and qualifications are stored as &lt;code&gt;interests&lt;/code&gt; and &lt;code&gt;education&lt;/code&gt; variables. The academic qualifications are defined as multiples of &lt;code&gt;[[education.courses]]&lt;/code&gt; and can be created or deleted as necessary. It&amp;rsquo;s possible to completely hide the interests and education lists by deleting their respective variables.&lt;/p&gt;
+
+&lt;h3 id=&#34;customize-the-homepage&#34;&gt;Customize the homepage&lt;/h3&gt;
+
+&lt;p&gt;Refer to our guide on using &lt;a href=&#34;http://physics.ucr.edu/~flip/post/widgets/&#34; target=&#34;_blank&#34;&gt;widgets&lt;/a&gt; to customize your homepage.&lt;/p&gt;
+
+&lt;h3 id=&#34;add-your-content&#34;&gt;Add your content&lt;/h3&gt;
+
+&lt;p&gt;Refer to our guide on &lt;a href=&#34;http://physics.ucr.edu/~flip/post/managing-content/&#34; target=&#34;_blank&#34;&gt;managing content&lt;/a&gt; to create your own publications, blog posts, talks, and projects.&lt;/p&gt;
+
+&lt;h3 id=&#34;remove-unused-widgets-and-pages&#34;&gt;Remove unused widgets and pages&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://physics.ucr.edu/~flip/post/managing-content/#removing-content&#34; target=&#34;_blank&#34;&gt;How to remove unused widgets and content pages&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;customization-upgrading&#34;&gt;Customization &amp;amp; Upgrading&lt;/h3&gt;
+
+&lt;p&gt;Continue reading below for advanced customization tips and instructions for keeping the framework up-to-date with any improvements that become available.&lt;/p&gt;
+
+&lt;h2 id=&#34;advanced-customization&#34;&gt;Advanced customization&lt;/h2&gt;
+
+&lt;p&gt;It is possible to carry out many customizations without touching any files in &lt;code&gt;themes/academic&lt;/code&gt;, making it easier to upgrade the framework in the future.&lt;/p&gt;
+
+&lt;h3 id=&#34;navigation-menu&#34;&gt;Navigation menu&lt;/h3&gt;
+
+&lt;p&gt;The &lt;code&gt;[[menu.main]]&lt;/code&gt; entries towards the bottom of &lt;code&gt;config.toml&lt;/code&gt; define the navigation links at the top of the website. They can be added or removed as desired.&lt;/p&gt;
+
+&lt;p&gt;To create a dropdown sub-menu, add &lt;code&gt;identifier = &amp;quot;something&amp;quot;&lt;/code&gt; to the parent item and &lt;code&gt;parent = &amp;quot;something&amp;quot;&lt;/code&gt; to the child item.&lt;/p&gt;
+
+&lt;h3 id=&#34;website-icon&#34;&gt;Website icon&lt;/h3&gt;
+
+&lt;p&gt;Save your main icon and mobile icon as square PNG images named &lt;code&gt;icon.png&lt;/code&gt; and &lt;code&gt;apple-touch-icon.png&lt;/code&gt;, respectively. Place them in your root &lt;code&gt;static/img/&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;h3 id=&#34;theme-color-css&#34;&gt;Theme color (CSS)&lt;/h3&gt;
+
+&lt;p&gt;You can link custom CSS assets (relative to your root &lt;code&gt;static/css&lt;/code&gt;) from your &lt;code&gt;config.toml&lt;/code&gt; using &lt;code&gt;custom_css = [&amp;quot;custom.css&amp;quot;]&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;For example, lets make a green theme. First, define &lt;code&gt;custom_css = [&amp;quot;green.css&amp;quot;]&lt;/code&gt; in &lt;code&gt;config.toml&lt;/code&gt;. Then we can download the example &lt;a href=&#34;https://gist.github.com/gcushen/d5525a4506b9ccf83f2bce592a895495&#34; target=&#34;_blank&#34;&gt;green theme&lt;/a&gt; and save it as &lt;code&gt;static/css/green.css&lt;/code&gt;, relative to your website root (i.e. &lt;strong&gt;not&lt;/strong&gt; in the &lt;code&gt;themes&lt;/code&gt; directory).&lt;/p&gt;
+
+&lt;h3 id=&#34;analytics&#34;&gt;Analytics&lt;/h3&gt;
+
+&lt;p&gt;To enable &lt;a href=&#34;http://www.google.com/analytics&#34; target=&#34;_blank&#34;&gt;Google Analytics&lt;/a&gt;, add your tracking code in &lt;code&gt;config.toml&lt;/code&gt; similarly to &lt;code&gt;googleAnalytics = &amp;quot;UA-12345678-9&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;third-party-and-local-scripts-js&#34;&gt;Third party and local scripts (JS)&lt;/h3&gt;
+
+&lt;p&gt;To add a third party script, create a file named &lt;code&gt;head_custom.html&lt;/code&gt; in a &lt;code&gt;layouts/partials/&lt;/code&gt; folder at the root of your website (not in the &lt;code&gt;themes&lt;/code&gt; folder). Any HTML code added to this file will be included within your website&amp;rsquo;s &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;. Therefore, it&amp;rsquo;s suitable for adding custom metadata or third party scripts specified with the &lt;em&gt;async&lt;/em&gt; attribute.&lt;/p&gt;
+
+&lt;p&gt;Whereas for your own local scripts, you can link your local JS assets (relative to your root &lt;code&gt;static/js&lt;/code&gt;) from your &lt;code&gt;config.toml&lt;/code&gt; using &lt;code&gt;custom_js  = [&amp;quot;custom.js&amp;quot;]&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;language-and-translation&#34;&gt;Language and translation&lt;/h3&gt;
+
+&lt;p&gt;The interface text (e.g. buttons) is stored in language files which are collected from Academic&amp;rsquo;s &lt;code&gt;themes/academic/i18n/&lt;/code&gt; folder, as well as an &lt;code&gt;i18n/&lt;/code&gt; folder at the root of your project.&lt;/p&gt;
+
+&lt;p&gt;To edit the interface text, copy &lt;code&gt;themes/academic/i18n/en.yaml&lt;/code&gt; to &lt;code&gt;i18n/en.yaml&lt;/code&gt; (relative to the root of your website). Open the new file and make any desired changes to the text appearing after &lt;code&gt;translation:&lt;/code&gt;. Note that the language files are formatted in YAML syntax.&lt;/p&gt;
+
+&lt;p&gt;To translate the interface text to another language, follow the above instructions, but name the new file in the form &lt;code&gt;i18n/X.yaml&lt;/code&gt; where &lt;code&gt;X&lt;/code&gt; is the appropriate &lt;a href=&#34;http://www.w3schools.com/tags/ref_language_codes.asp&#34; target=&#34;_blank&#34;&gt;ISO/RFC5646 language identifier&lt;/a&gt; for the translation. Then follow the brief instructions in the &lt;em&gt;Language&lt;/em&gt; section at the bottom of your &lt;code&gt;config.toml&lt;/code&gt;. To change the default language used by Academic, set &lt;code&gt;defaultContentLanguage&lt;/code&gt; to the desired language identifier in your configuration file.&lt;/p&gt;
+
+&lt;p&gt;To translate the navigation bar, you can edit the default &lt;code&gt;[[menu.main]]&lt;/code&gt; instances in &lt;code&gt;config.toml&lt;/code&gt;. However, for a multilingual site, you will need to duplicate all of the &lt;code&gt;[[menu.main]]&lt;/code&gt; instances and rename the new instances from &lt;code&gt;[[menu.main]]&lt;/code&gt; to &lt;code&gt;[[languages.X.menu.main]]&lt;/code&gt;, where &lt;code&gt;X&lt;/code&gt; is the language identifier (e.g. &lt;code&gt;[[languages.zh.menu.main]]&lt;/code&gt; for Simplified Chinese). Thus, the navigation bar can be displayed in multiple languages.&lt;/p&gt;
+
+&lt;p&gt;To translate a content file in your &lt;code&gt;content/&lt;/code&gt; folder into another language, copy the file to &lt;code&gt;filename.X.md&lt;/code&gt; where &lt;code&gt;filename&lt;/code&gt; is your existing filename and &lt;code&gt;X&lt;/code&gt; is the appropriate &lt;a href=&#34;http://www.w3schools.com/tags/ref_language_codes.asp&#34; target=&#34;_blank&#34;&gt;ISO/RFC5646 language identifier&lt;/a&gt; for the translation. Then translate the content in the new file to the specified language.&lt;/p&gt;
+
+&lt;p&gt;For further details on Hugo&amp;rsquo;s internationalization and multilingual features, refer to the &lt;a href=&#34;https://gohugo.io/content/multilingual/&#34; target=&#34;_blank&#34;&gt;associated Hugo documentation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;permalinks&#34;&gt;Permalinks&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Permalinks&lt;/em&gt;, or &lt;em&gt;permanent links&lt;/em&gt;, are URLs to individual pages and posts on your website. They are permanent web addresses which can be used to link to your content. Using Hugo&amp;rsquo;s &lt;em&gt;permalinks&lt;/em&gt; option these can be easily customized. For example, the blog post URL can be changed to the form &lt;em&gt;yourURL/2016/05/01/my-post-slug&lt;/em&gt; by adding the following near the top of your &lt;code&gt;config.toml&lt;/code&gt; (before &lt;code&gt;[params]&lt;/code&gt; settings):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[permalinks]
+    post = &amp;quot;/:year/:month/:day/:slug&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Where &lt;code&gt;:slug&lt;/code&gt; defaults to the filename of the post, excluding the file extension. However, slug may be overridden on a per post basis if desired, simply by setting &lt;code&gt;slug = &amp;quot;my-short-post-title&amp;quot;&lt;/code&gt; in your post preamble.&lt;/p&gt;
+
+&lt;h2 id=&#34;upgrading&#34;&gt;Upgrading&lt;/h2&gt;
+
+&lt;p&gt;Feel free to &lt;em&gt;star&lt;/em&gt; the project on &lt;a href=&#34;https://github.com/gcushen/hugo-academic/&#34; target=&#34;_blank&#34;&gt;Github&lt;/a&gt; and monitor the &lt;a href=&#34;https://github.com/gcushen/hugo-academic/commits/master&#34; target=&#34;_blank&#34;&gt;commits&lt;/a&gt; for updates.&lt;/p&gt;
+
+&lt;p&gt;Before upgrading the framework, it is recommended to make a backup of your entire website directory, or at least your &lt;code&gt;themes/academic&lt;/code&gt; directory. You can also read about the &lt;a href=&#34;https://github.com/gcushen/hugo-academic/releases&#34; target=&#34;_blank&#34;&gt;most recent milestones&lt;/a&gt; (but this doesn&amp;rsquo;t necessarily reflect the latest &lt;em&gt;master&lt;/em&gt; release).&lt;/p&gt;
+
+&lt;p&gt;Before upgrading for the first time, the remote &lt;em&gt;origin&lt;/em&gt; repository should be renamed to &lt;em&gt;upstream&lt;/em&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd themes/academic
+$ git remote rename origin upstream
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To list available updates:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd themes/academic
+$ git fetch upstream
+$ git log --pretty=oneline --abbrev-commit --decorate HEAD..upstream/master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then, upgrade by running:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git pull upstream
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you have modified files in &lt;code&gt;themes/academic&lt;/code&gt;, git will attempt to auto-merge changes. If conflicts are reported, you will need to manually edit the files with conflicts and add them back (&lt;code&gt;git add &amp;lt;filename&amp;gt;&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;If there are any issues after upgrading, you may wish to compare your site with the latest &lt;a href=&#34;https://github.com/gcushen/hugo-academic/tree/master/exampleSite&#34; target=&#34;_blank&#34;&gt;example site&lt;/a&gt; to check if any settings changed.&lt;/p&gt;
+
+&lt;h2 id=&#34;feedback-contributing&#34;&gt;Feedback &amp;amp; Contributing&lt;/h2&gt;
+
+&lt;p&gt;Please use the &lt;a href=&#34;https://github.com/gcushen/hugo-academic/issues&#34; target=&#34;_blank&#34;&gt;issue tracker&lt;/a&gt; to let me know about any bugs or feature requests, or alternatively make a pull request.&lt;/p&gt;
+
+&lt;p&gt;For general questions about Hugo, there is a &lt;a href=&#34;http://discuss.gohugo.io&#34; target=&#34;_blank&#34;&gt;Hugo discussion forum&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;Copyright 2016 &lt;a href=&#34;https://georgecushen.com&#34; target=&#34;_blank&#34;&gt;George Cushen&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Released under the &lt;a href=&#34;https://github.com/gcushen/hugo-academic/blob/master/LICENSE.md&#34; target=&#34;_blank&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Customizing the homepage with widgets</title>
+      <link>http://physics.ucr.edu/~flip/post/widgets/</link>
+      <pubDate>Wed, 20 Apr 2016 11:00:00 +0000</pubDate>
+      
+      <guid>http://physics.ucr.edu/~flip/post/widgets/</guid>
+      <description>
+
+&lt;p&gt;Homepage widgets display as sections on the homepage. They can be enabled/disabled and configured as desired. Academic has the following widgets available to use:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;About/biography&lt;/li&gt;
+&lt;li&gt;Selected publications&lt;/li&gt;
+&lt;li&gt;Recent publications&lt;/li&gt;
+&lt;li&gt;Recent news/blog posts&lt;/li&gt;
+&lt;li&gt;Projects&lt;/li&gt;
+&lt;li&gt;Selected talks&lt;/li&gt;
+&lt;li&gt;Recent talks&lt;/li&gt;
+&lt;li&gt;Contact&lt;/li&gt;
+&lt;li&gt;Custom widget (demonstrated with the &lt;em&gt;teaching&lt;/em&gt; example)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The example site that you copied to create your site uses all the different types of widget (except talks), so you can generally just delete the widgets you don&amp;rsquo;t need and customize the parameters of the widgets you wish to keep.&lt;/p&gt;
+
+&lt;p&gt;The parameters for each widget vary. They can be found in the preamble/frontmatter (between the pair of &lt;code&gt;+++&lt;/code&gt;) for each widget installed in the &lt;code&gt;content/home/&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;By default, publications will be displayed in a simple list. If you prefer a more detailed list with abstract and image, you can enable the detailed publication list on the homepage by setting &lt;code&gt;detailed_list = true&lt;/code&gt; in &lt;code&gt;content/home/publications.md&lt;/code&gt;.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;add-a-widget-to-the-homepage&#34;&gt;Add a widget to the homepage&lt;/h2&gt;
+
+&lt;p&gt;To add a widget manually, copy the relevant widget from &lt;code&gt;themes/academic/exampleSite/content/home/&lt;/code&gt; to your &lt;code&gt;content/home/&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;Widget identifiers are set to their respective filenames, so a &lt;code&gt;content/home/about.md&lt;/code&gt; widget can be linked from the navigation bar by setting the relevant URL as &lt;code&gt;&amp;quot;#about&amp;quot;&lt;/code&gt; in &lt;code&gt;config.toml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;This means that if you want to use multiple instances of a widget, each widget will be assigned a unique ID based on the filename that you set. You can then use that ID for linking, like in the above example.&lt;/p&gt;
+
+&lt;h2 id=&#34;using-the-custom-widget&#34;&gt;Using the custom widget&lt;/h2&gt;
+
+&lt;p&gt;You can use the custom widget to create your own home page sections.&lt;/p&gt;
+
+&lt;p&gt;Simply duplicate (copy/paste) and rename the example &lt;em&gt;teaching&lt;/em&gt; file at &lt;code&gt;content/home/teaching.md&lt;/code&gt;. Then edit the section title, weight (refer to &lt;em&gt;Ordering sections&lt;/em&gt; below), and content as desired.&lt;/p&gt;
+
+&lt;p&gt;You may also wish to add a navigation link to the top of the page that points to the new section. This can be achieved by adding something similar to the following lines to your &lt;code&gt;config.toml&lt;/code&gt;, where the URL will consist of the first title word in lowercase:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[[menu.main]]
+    name = &amp;quot;Research&amp;quot;
+    url = &amp;quot;#research&amp;quot;
+    weight = 10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;remove-a-widget-from-the-homepage&#34;&gt;Remove a widget from the homepage&lt;/h2&gt;
+
+&lt;p&gt;If you do not require a particular widget, you can simply delete any associated files from the &lt;code&gt;content/home/&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;To remove a navigation link from the top of the page, remove the associated &lt;code&gt;[[menu.main]]&lt;/code&gt; entry in &lt;code&gt;config.toml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;ordering-widgets&#34;&gt;Ordering widgets&lt;/h2&gt;
+
+&lt;p&gt;The order that the homepage widgets are displayed in is defined by the &lt;code&gt;weight&lt;/code&gt; parameter in each of the files in the &lt;code&gt;content/home/&lt;/code&gt; directory. The widgets are displayed in ascending order of their &lt;code&gt;weight&lt;/code&gt;, so you can simply edit the &lt;code&gt;weight&lt;/code&gt; parameters as desired.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Managing content</title>
+      <link>http://physics.ucr.edu/~flip/post/managing-content/</link>
+      <pubDate>Wed, 20 Apr 2016 11:00:00 +0000</pubDate>
+      
+      <guid>http://physics.ucr.edu/~flip/post/managing-content/</guid>
+      <description>&lt;p&gt;This is a brief guide to managing content with the Academic framework. Content can include publications, projects, talks, and news/blog articles. After you have read this guide about creating and managing content, you may also be interested to learn about &lt;a href=&#34;http://physics.ucr.edu/~flip/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;writing content with Markdown, LaTeX, and Shortcodes&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To enable LaTeX math rendering for a page, you should include &lt;code&gt;math = true&lt;/code&gt; in the page&amp;rsquo;s &lt;code&gt;+++&lt;/code&gt; preamble, as demonstrated in the included example site. Otherwise, to enable math on the homepage or for all pages, you must globally set &lt;code&gt;math = true&lt;/code&gt; in &lt;code&gt;config.toml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;To disable source code highlighting by default for all pages, set &lt;code&gt;highlight = false&lt;/code&gt; in &lt;code&gt;config.toml&lt;/code&gt;. You can then enable source code highlighting only on pages that need it by setting &lt;code&gt;highlight = true&lt;/code&gt; in that page&amp;rsquo;s preamble. See the &lt;a href=&#34;http://physics.ucr.edu/~flip/post/writing-markdown-latex/#code-highlighting&#34; target=&#34;_blank&#34;&gt;code-highlighting docs&lt;/a&gt; for more details.&lt;/p&gt;
+
+&lt;p&gt;To display a featured image in content page headers, the parameters below can be inserted towards the end of a page&amp;rsquo;s &lt;code&gt;+++&lt;/code&gt; preamble. It is assumed that the image is located in your &lt;code&gt;static/img/&lt;/code&gt; folder, so the full path in the example below will be &lt;code&gt;static/img/headers/getting-started.png&lt;/code&gt;. The &lt;code&gt;caption&lt;/code&gt; parameter can be used to write an image caption or credit.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[header]
+image = &amp;quot;headers/getting-started.png&amp;quot;
+caption = &amp;quot;Image credit: [**Academic**](https://github.com/gcushen/hugo-academic/)&amp;quot;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;If you wish to prevent a featured image automatically being used for a post&amp;rsquo;s thumbnail on the homepage, the &lt;code&gt;preview = false&lt;/code&gt; parameter can be added to &lt;code&gt;[header]&lt;/code&gt;.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;create-a-publication&#34;&gt;Create a publication&lt;/h2&gt;
+
+&lt;p&gt;To create a new publication:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo new publication/my-paper-name.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then edit the default variables at the top of &lt;code&gt;content/publication/my-paper-name.md&lt;/code&gt; to include the details of your publication. The &lt;code&gt;url_&lt;/code&gt; variables are used to generate links associated with your publication, such as for viewing PDFs of papers. Here is an example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+++
+abstract = &amp;quot;An abstract...&amp;quot;
+authors = [&amp;quot;First author&#39;s name&amp;quot;, &amp;quot;Second author&#39;s name&amp;quot;]
+date = &amp;quot;2013-07-01&amp;quot;
+image = &amp;quot;&amp;quot;
+image_preview = &amp;quot;&amp;quot;
+math = false
+publication = &amp;quot;The publishing part of the citation goes here. You may use *Markdown* for italics etc.&amp;quot;
+title = &amp;quot;A publication title, such as title of a paper&amp;quot;
+url_code = &amp;quot;&amp;quot;
+url_dataset = &amp;quot;&amp;quot;
+url_pdf = &amp;quot;pdf/my-paper-name.pdf&amp;quot;
+url_project = &amp;quot;&amp;quot;
+url_slides = &amp;quot;&amp;quot;
+url_video = &amp;quot;&amp;quot;
++++
+
+Further details on your publication can be written here using *Markdown* for formatting. This text will be displayed on the Publication Detail page.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;url_&lt;/code&gt; links can either point to local or web content. Associated local publication content, such as PDFs, may be copied to a &lt;code&gt;static/pdf/&lt;/code&gt; folder and referenced like &lt;code&gt;url_pdf = &amp;quot;pdf/my-paper-name.pdf&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can also associate custom link buttons with the publication by adding the following block(s) within the variable preamble above, which is denoted by &lt;code&gt;+++&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[[url_custom]]
+    name = &amp;quot;Custom Link&amp;quot;
+    url = &amp;quot;http://www.example.org&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you enabled &lt;code&gt;detailed_list&lt;/code&gt; for publications in &lt;code&gt;config.toml&lt;/code&gt;, then there are a few more optional variables that you can include in the publication page preamble. You may use &lt;code&gt;abstract_short = &amp;quot;friendly summary of abstract&amp;quot;&lt;/code&gt; and &lt;code&gt;publication_short = &amp;quot;abbreviated publication details&amp;quot;&lt;/code&gt; to display a friendly summary of the abstract and abbreviate the publication details, respectively. Furthermore, there is the option to display a different image on the homepage to the publication detail page by setting &lt;code&gt;image_preview = &amp;quot;my-image.jpg&amp;quot;&lt;/code&gt;. This can be useful if you wish to scale down the image for the homepage or simply if you just wish to show a different image for the preview.&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;p&gt;Any double quotes (&lt;code&gt;&amp;quot;&lt;/code&gt;) or backslashes (e.g. LaTeX &lt;code&gt;\times&lt;/code&gt;) occurring within the value of any frontmatter parameter (such as the &lt;em&gt;abstract&lt;/em&gt;) should be escaped with a backslash (&lt;code&gt;\&lt;/code&gt;). For example, the symbol &lt;code&gt;&amp;quot;&lt;/code&gt; and LaTeX text &lt;code&gt;\times&lt;/code&gt; become &lt;code&gt;\&amp;quot;&lt;/code&gt; and &lt;code&gt;\\times&lt;/code&gt;, respectively. Refer to the &lt;a href=&#34;https://github.com/toml-lang/toml#user-content-string&#34; target=&#34;_blank&#34;&gt;TOML documentation&lt;/a&gt; for more info.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;post-an-article&#34;&gt;Post an article&lt;/h2&gt;
+
+&lt;p&gt;To create a blog/news article:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo new post/my-article-name.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then edit the newly created file &lt;code&gt;content/post/my-article-name.md&lt;/code&gt; with your full title and content.&lt;/p&gt;
+
+&lt;p&gt;Hugo will automatically generate summaries of posts that appear on the homepage. If you are dissatisfied with an automated summary, you can either limit the summary length by appropriately placing &lt;code&gt;&amp;#60;&amp;#33;&amp;#45;&amp;#45;more&amp;#45;&amp;#45;&amp;#62;&lt;/code&gt; in the article body, or completely override the automated summary by adding a &lt;code&gt;summary&lt;/code&gt; parameter to the &lt;code&gt;+++&lt;/code&gt; preamble such that:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;summary = &amp;quot;Summary of my post.&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To disable commenting for a specific post, you can add &lt;code&gt;disable_comments = true&lt;/code&gt; to the post &lt;code&gt;+++&lt;/code&gt; preamble. Or to disable commenting for all posts, you can either set &lt;code&gt;disqusShortname = &amp;quot;&amp;quot;&lt;/code&gt; or &lt;code&gt;disable_comments = true&lt;/code&gt; in &lt;code&gt;config.toml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;create-a-project&#34;&gt;Create a project&lt;/h2&gt;
+
+&lt;p&gt;To create a project:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo new project/my-project-name.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then edit the newly created file &lt;code&gt;content/project/my-project-name.md&lt;/code&gt;. Either you can link the project to an external project website by setting the &lt;code&gt;external_link = &amp;quot;http://external-project.com&amp;quot;&lt;/code&gt; variable at the top of the file, or you can add content (below the final &lt;code&gt;+++&lt;/code&gt;) in order to render a project page on your website.&lt;/p&gt;
+
+&lt;h2 id=&#34;create-a-talk&#34;&gt;Create a talk&lt;/h2&gt;
+
+&lt;p&gt;To create a talk:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo new talk/my-talk-name.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then edit the newly created file &lt;code&gt;content/talk/my-talk-name.md&lt;/code&gt; with your full talk title and details. Note that many of the talk parameters are similar to the publication parameters.&lt;/p&gt;
+
+&lt;h2 id=&#34;manage-node-index-pages&#34;&gt;Manage node index pages&lt;/h2&gt;
+
+&lt;p&gt;The node index pages (e.g. &lt;code&gt;/post/&lt;/code&gt;) are the special pages which list all of your content. They can exist for blog posts, publications, and talks. The homepage widgets will automatically link to the node index pages when you have more items of content than can be displayed in the widget. Therefore, if you don&amp;rsquo;t have much content, you may not see the automatic links yet - but you can also manually link to them using a normal Markdown formatted link in your content.&lt;/p&gt;
+
+&lt;p&gt;You can edit the title and add your own content, such as an introduction, by creating and editing the following content files for the node indexes:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo new post/_index.md
+hugo new publication/_index.md
+hugo new talk/_index.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then remove all parameters except for &lt;code&gt;title&lt;/code&gt;, &lt;code&gt;math&lt;/code&gt;, &lt;code&gt;highlight&lt;/code&gt;, and &lt;code&gt;date&lt;/code&gt;. Edit the &lt;code&gt;title&lt;/code&gt; parameter as desired and add any content after the &lt;code&gt;+++&lt;/code&gt; preamble/frontmatter ends. For example, you should have something similar to:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;+++
+title = &amp;quot;List of my posts&amp;quot;
+date = &amp;quot;2017-01-01T00:00:00Z&amp;quot;
+math = false
+highlight = false
++++
+
+Below is an automatically generated list of all my blog posts!
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;removing-content&#34;&gt;Removing content&lt;/h2&gt;
+
+&lt;p&gt;Generally, to remove content, simply delete the relevant file from your &lt;code&gt;content/post&lt;/code&gt;, &lt;code&gt;content/publication&lt;/code&gt;, &lt;code&gt;content/project&lt;/code&gt;, or &lt;code&gt;content/talk&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;h2 id=&#34;view-your-updated-site&#34;&gt;View your updated site&lt;/h2&gt;
+
+&lt;p&gt;After you have made changes to your site, you can view it by running the &lt;code&gt;hugo server --watch&lt;/code&gt; command and then opening &lt;a href=&#34;http://localhost:1313&#34; target=&#34;_blank&#34;&gt;localhost:1313&lt;/a&gt; in your web browser.&lt;/p&gt;
+
+&lt;h2 id=&#34;deploy-your-site&#34;&gt;Deploy your site&lt;/h2&gt;
+
+&lt;p&gt;Finally, you can build the static website to a &lt;code&gt;public/&lt;/code&gt; folder ready for deployment using the &lt;code&gt;hugo&lt;/code&gt; command.&lt;/p&gt;
+
+&lt;p&gt;You may then deploy your site by copying the &lt;code&gt;public/&lt;/code&gt; directory (by FTP, SFTP, WebDAV, Rsync, git push, etc.) to your production web server.&lt;/p&gt;
+
+&lt;p&gt;Note that running &lt;code&gt;hugo&lt;/code&gt; does not remove any previously generated files before building. Therefore, it&amp;rsquo;s best practice to delete your &lt;code&gt;public/&lt;/code&gt; directory prior to running &lt;code&gt;hugo&lt;/code&gt; to ensure no old or interim files are deployed to your server.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Writing content with Markdown, LaTeX, and Shortcodes</title>
+      <link>http://physics.ucr.edu/~flip/post/writing-markdown-latex/</link>
+      <pubDate>Wed, 20 Apr 2016 10:00:00 +0000</pubDate>
+      
+      <guid>http://physics.ucr.edu/~flip/post/writing-markdown-latex/</guid>
+      <description>&lt;p&gt;Content can be written using &lt;a href=&#34;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&#34; target=&#34;_blank&#34;&gt;Markdown&lt;/a&gt;, &lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34; target=&#34;_blank&#34;&gt;LaTeX math&lt;/a&gt;, and &lt;a href=&#34;http://gohugo.io/extras/shortcodes/&#34; target=&#34;_blank&#34;&gt;Hugo Shortcodes&lt;/a&gt;. Additionally, HTML may be used for advanced formatting. This article gives an overview of the most common formatting options.&lt;/p&gt;
+
+&lt;h2 id=&#34;sub-headings&#34;&gt;Sub-headings&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;emphasis&#34;&gt;Emphasis&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;Italics with *asterisks* or _underscores_.
+
+Bold with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough with ~~two tildes~~.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;ordered-lists&#34;&gt;Ordered lists&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;1. First item
+2. Another item
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;unordered-lists&#34;&gt;Unordered lists&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;* First item
+* Another item
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;images&#34;&gt;Images&lt;/h2&gt;
+
+&lt;p&gt;Images may be added to a page by placing them in your &lt;code&gt;static/img/&lt;/code&gt; folder and referencing them using one of the following two notations:&lt;/p&gt;
+
+&lt;p&gt;A general image:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;![alternative text for search engines](/img/screenshot.png)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A numbered figure with caption:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{&amp;lt; figure src=&amp;quot;/img/screenshot.png&amp;quot; title=&amp;quot;Figure Caption&amp;quot; &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;[I&#39;m a link](https://www.google.com)
+[A post]({{&amp;lt; ref &amp;quot;post/hi.md&amp;quot; &amp;gt;}})
+[A publication]({{&amp;lt; ref &amp;quot;publication/hi.md&amp;quot; &amp;gt;}})
+[A project]({{&amp;lt; ref &amp;quot;project/hi.md&amp;quot; &amp;gt;}})
+[Another section]({{&amp;lt; relref &amp;quot;hi.md#who&amp;quot; &amp;gt;}})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;emojis&#34;&gt;Emojis&lt;/h2&gt;
+
+&lt;p&gt;See the &lt;a href=&#34;http://www.webpagefx.com/tools/emoji-cheat-sheet/&#34; target=&#34;_blank&#34;&gt;Emoji cheat sheet&lt;/a&gt; for available emoticons. The following serves as an example, but you should remove the spaces between each emoji name and pair of semicolons:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;I : heart : Academic : smile :
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I ❤️ Academic 😄&lt;/p&gt;
+
+&lt;h2 id=&#34;blockquote&#34;&gt;Blockquote&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; This is a blockquote.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This is a blockquote.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;footnotes&#34;&gt;Footnotes&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;I have more [^1] to say.
+
+[^1]: Footnote example.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I have more &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; to say.&lt;/p&gt;
+
+&lt;h2 id=&#34;code-highlighting&#34;&gt;Code highlighting&lt;/h2&gt;
+
+&lt;p&gt;Pass the &lt;em&gt;language&lt;/em&gt; of the code, such as &lt;code&gt;python&lt;/code&gt;, as a parameter after three backticks:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;```python
+# Example of code highlighting
+input_string_var = input(&amp;quot;Enter some data: &amp;quot;)
+print(&amp;quot;You entered: {}&amp;quot;.format(input_string_var))
+```
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Result:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Example of code highlighting
+input_string_var = input(&amp;quot;Enter some data: &amp;quot;)
+print(&amp;quot;You entered: {}&amp;quot;.format(input_string_var))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;highlighting-options&#34;&gt;Highlighting options&lt;/h3&gt;
+
+&lt;p&gt;The Academic theme uses &lt;a href=&#34;https://highlightjs.org&#34; target=&#34;_blank&#34;&gt;highlight.js&lt;/a&gt; for source code highlighting, and highlighting is enabled by default for all pages. However, several configuration options are supported that allow finer-grained control over highlight.js.&lt;/p&gt;
+
+&lt;p&gt;The following table lists the supported options for configuring highlight.js, along with their expected type and a short description. A &amp;ldquo;yes&amp;rdquo; in the &lt;strong&gt;config.toml&lt;/strong&gt; column means the value can be set globally in &lt;code&gt;config.toml&lt;/code&gt;, and a &amp;ldquo;yes&amp;rdquo; in the &lt;strong&gt;preamble&lt;/strong&gt; column means that the value can be set locally in a particular page&amp;rsquo;s preamble.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;option&lt;/th&gt;
+&lt;th&gt;type&lt;/th&gt;
+&lt;th&gt;description&lt;/th&gt;
+&lt;th&gt;config.toml&lt;/th&gt;
+&lt;th&gt;preamble&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;highlight&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;boolean&lt;/td&gt;
+&lt;td&gt;enable/disable highlighting&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;highlight_languages&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;slice&lt;/td&gt;
+&lt;td&gt;choose additional languages&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;highlight_style&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;choose a highlighting style&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;highlight_version&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;choose the highlight.js version&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&#34;option-highlight&#34;&gt;Option &lt;code&gt;highlight&lt;/code&gt;&lt;/h4&gt;
+
+&lt;p&gt;The &lt;code&gt;highlight&lt;/code&gt; option allows enabling or disabling the inclusion of highlight.js, either globally or for a particular page. If the option is unset, it has the same effect as if you had specified &lt;code&gt;highlight = true&lt;/code&gt;. That is, the highlight.js javascript and css files will be included in every page. If you&amp;rsquo;d like to only include highlight.js files on pages that actually require source code highlighting, you can set &lt;code&gt;highlight = false&lt;/code&gt; in &lt;code&gt;config.toml&lt;/code&gt;, and then override it by setting &lt;code&gt;highlight = true&lt;/code&gt; in the preamble of any pages that require source code highlighting. Conversely, you could enable highlighting globally, and disable it locally for pages that do not require it. Here is a table that shows whether highlighting will be enabled for a page, based on the values of &lt;code&gt;highlight&lt;/code&gt; set in &lt;code&gt;config.toml&lt;/code&gt; and/or the page&amp;rsquo;s preamble.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;config.toml&lt;/th&gt;
+&lt;th&gt;page preamble&lt;/th&gt;
+&lt;th&gt;highlighting enabled for page?&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;unset or true&lt;/td&gt;
+&lt;td&gt;unset or true&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;unset or true&lt;/td&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;td&gt;unset or false&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&#34;option-highlight-languages&#34;&gt;Option &lt;code&gt;highlight_languages&lt;/code&gt;&lt;/h4&gt;
+
+&lt;p&gt;The &lt;code&gt;highlight_languages&lt;/code&gt; option allows you to specify additional languages that are supported by highlight.js, but are not considered &amp;ldquo;common&amp;rdquo; and therefore are not supported by default. For example, if you want source code highlighting for Go and clojure in all pages, set &lt;code&gt;highlight_languages = [&amp;quot;go&amp;quot;, &amp;quot;clojure&amp;quot;]&lt;/code&gt; in &lt;code&gt;config.toml&lt;/code&gt;. If, on the other hand, you want to enable a language only for a specific page, you can set &lt;code&gt;highlight_languages&lt;/code&gt; in that page&amp;rsquo;s preamble.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;highlight_languages&lt;/code&gt; options specified in &lt;code&gt;config.toml&lt;/code&gt; and in a page&amp;rsquo;s preamble are additive. That is, if &lt;code&gt;config.toml&lt;/code&gt; contains, &lt;code&gt;highlight_languages = [&amp;quot;go&amp;quot;]&lt;/code&gt; and the page&amp;rsquo;s preamble contains &lt;code&gt;highlight_languages = [&amp;quot;ocaml&amp;quot;]&lt;/code&gt;, then javascript files for &lt;em&gt;both&lt;/em&gt; go and ocaml will be included for that page.&lt;/p&gt;
+
+&lt;p&gt;If the &lt;code&gt;highlight_languages&lt;/code&gt; option is set, then the corresponding javascript files will be served from the &lt;a href=&#34;https://cdnjs.com/libraries/highlight.js/&#34; target=&#34;_blank&#34;&gt;cdnjs server&lt;/a&gt;. To see a list of available languages, visit the &lt;a href=&#34;https://cdnjs.com/libraries/highlight.js/&#34; target=&#34;_blank&#34;&gt;cdnjs page&lt;/a&gt; and search for links with the word &amp;ldquo;languages&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;highlight_languages&lt;/code&gt; option provides an easy and convenient way to include support for additional languages to be severed from a CDN. If serving unmodified files from cdnjs doesn&amp;rsquo;t meet your needs, you can include javascript files for additional language support via one of the methods described in the &lt;a href=&#34;http://physics.ucr.edu/~flip/post/getting-started/#third-party-and-local-scripts-js&#34; target=&#34;_blank&#34;&gt;getting started guide&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;option-highlight-style&#34;&gt;Option &lt;code&gt;highlight_style&lt;/code&gt;&lt;/h4&gt;
+
+&lt;p&gt;The &lt;code&gt;highlight_style&lt;/code&gt; option allows you to select an alternate css style for highlighted code. For example, if you wanted to use the solarized-dark style, you could set &lt;code&gt;highlight_style = &amp;quot;solarized-dark&amp;quot;&lt;/code&gt; in &lt;code&gt;config.toml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;If the &lt;code&gt;highlight_style&lt;/code&gt; option is unset, the default is to use the file &lt;code&gt;/css/highlight.min.css&lt;/code&gt;, either the one provided by the Academic theme, or else the one in your local &lt;code&gt;static&lt;/code&gt; directory.  The &lt;code&gt;/css/highlight.min.css&lt;/code&gt; file provided by Academic is equivalent to the &lt;code&gt;github&lt;/code&gt; style from highlight.js.&lt;/p&gt;
+
+&lt;p&gt;If the &lt;code&gt;highlight_style&lt;/code&gt; option &lt;em&gt;is&lt;/em&gt; set, then &lt;code&gt;/css/highlight.min.css&lt;/code&gt; is ignored, and the corresponding css file will be served from the &lt;a href=&#34;https://cdnjs.com/libraries/highlight.js/&#34; target=&#34;_blank&#34;&gt;cdnjs server&lt;/a&gt;. To see a list of available styles, visit the &lt;a href=&#34;https://cdnjs.com/libraries/highlight.js/&#34; target=&#34;_blank&#34;&gt;cdnjs page&lt;/a&gt; and search for links with the word &amp;ldquo;styles&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;See the &lt;a href=&#34;https://highlightjs.org/static/demo/&#34; target=&#34;_blank&#34;&gt;highlight.js demo page&lt;/a&gt; for examples of available styles.&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;Not all styles listed on the &lt;a href=&#34;https://highlightjs.org/static/demo/&#34; target=&#34;_blank&#34;&gt;highlight.js demo page&lt;/a&gt; are available from the &lt;a href=&#34;https://cdnjs.com/libraries/highlight.js/&#34; target=&#34;_blank&#34;&gt;cdnjs server&lt;/a&gt;. If you want to use a style that is not served by cdnjs, just leave &lt;code&gt;highlight_style&lt;/code&gt; unset, and place the corresponding css file in &lt;code&gt;/static/css/highlight.min.css&lt;/code&gt;.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;If you don&amp;rsquo;t want to change the default style that ships with Academic but you do want the style file served from the &lt;a href=&#34;https://cdnjs.com/libraries/highlight.js/&#34; target=&#34;_blank&#34;&gt;cdnjs server&lt;/a&gt;, set &lt;code&gt;highlight_style = &amp;quot;github&amp;quot;&lt;/code&gt; in &lt;code&gt;config.toml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;p&gt;The &lt;code&gt;highlight_style&lt;/code&gt; option is only recognized when set in &lt;code&gt;config.toml&lt;/code&gt;. Setting &lt;code&gt;highlight_style&lt;/code&gt; in your page&amp;rsquo;s preamble has no effect.&lt;/p&gt;
+
+&lt;h4 id=&#34;option-highlight-version&#34;&gt;Option &lt;code&gt;highlight_version&lt;/code&gt;&lt;/h4&gt;
+
+&lt;p&gt;The &lt;code&gt;highlight_version&lt;/code&gt; option, as the name implies, allows you to select the version of highlight.js you want to use. The default value is &amp;ldquo;9.9.0&amp;rdquo;. The &lt;code&gt;highlight_version&lt;/code&gt; option is only recognized when set in &lt;code&gt;config.toml&lt;/code&gt;. Setting &lt;code&gt;highlight_version&lt;/code&gt; in your page&amp;rsquo;s preamble has no effect.&lt;/p&gt;
+
+&lt;h2 id=&#34;twitter-tweet&#34;&gt;Twitter tweet&lt;/h2&gt;
+
+&lt;p&gt;To include a single tweet, pass the tweet’s ID from the tweet&amp;rsquo;s URL as parameter to the shortcode:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{&amp;lt; tweet 666616452582129664 &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;youtube&#34;&gt;Youtube&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;{{&amp;lt; youtube w7Ft2ymGmfc &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;vimeo&#34;&gt;Vimeo&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;{{&amp;lt; vimeo 146022717 &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;github-gist&#34;&gt;GitHub gist&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;{{&amp;lt; gist USERNAME GIST-ID  &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;speaker-deck&#34;&gt;Speaker Deck&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;{{&amp;lt; speakerdeck 4e8126e72d853c0060001f97 &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;rm-latex-math&#34;&gt;$\rm \LaTeX$ math&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-TeX&#34;&gt;$$\left [ – \frac{\hbar^2}{2 m} \frac{\partial^2}{\partial x^2} + V \right ] \Psi = i \hbar \frac{\partial}{\partial t} \Psi$$
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;$$\left [ – \frac{\hbar^2}{2 m} \frac{\partial^2}{\partial x^2} + V \right ] \Psi = i \hbar \frac{\partial}{\partial t} \Psi$$&lt;/p&gt;
+
+&lt;p&gt;Alternatively, inline math can be written by wrapping the formula with only a single &lt;code&gt;$&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;This is inline: $\mathbf{y} = \mathbf{X}\boldsymbol\beta + \boldsymbol\varepsilon$
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is inline: $\mathbf{y} = \mathbf{X}\boldsymbol\beta + \boldsymbol\varepsilon$&lt;/p&gt;
+
+&lt;h2 id=&#34;table&#34;&gt;Table&lt;/h2&gt;
+
+&lt;p&gt;Code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Markdown&#34;&gt;| Command           | Description                    |
+| ------------------| ------------------------------ |
+| `hugo`            | Build your website.            |
+| `hugo serve -w`   | View your website.             |
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Result:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Command&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;hugo&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Build your website.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;hugo serve -w&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;View your website.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;alerts&#34;&gt;Alerts&lt;/h2&gt;
+
+&lt;p&gt;Alerts are a useful feature that add side content such as tips, notes, or warnings to your articles. They are especially handy when writing educational tutorial-style articles. Use the corresponding shortcodes to enable alerts inside your content:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{% alert note %}}
+Here&#39;s a tip or note...
+{{% /alert %}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will display the following &lt;em&gt;note&lt;/em&gt; block:&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;Here&amp;rsquo;s a tip or note&amp;hellip;&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;pre&gt;&lt;code&gt;{{% alert warning %}}
+Here&#39;s some important information...
+{{% /alert %}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will display the following &lt;em&gt;warning&lt;/em&gt; block:&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;p&gt;Here&amp;rsquo;s some important information&amp;hellip;&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;Footnote example.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Migrate from Jekyll to Hugo</title>
+      <link>http://physics.ucr.edu/~flip/post/migrate-from-jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://physics.ucr.edu/~flip/post/migrate-from-jekyll/</guid>
+      <description>
+
+&lt;p&gt;Here are a few tips for migrating an existing website from Jekyll to Hugo. These tips can be applied in conjunction with following Hugo Academic&amp;rsquo;s &lt;a href=&#34;http://physics.ucr.edu/~flip/post/getting-started/&#34; target=&#34;_blank&#34;&gt;getting started guide&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;move-static-content-to-static&#34;&gt;Move static content to &lt;code&gt;static&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Jekyll has a rule that any directory not starting with &lt;code&gt;_&lt;/code&gt; will be copied as-is to the &lt;code&gt;_site&lt;/code&gt; output. Hugo keeps all static content under &lt;code&gt;static&lt;/code&gt;. You should therefore move it all there.
+With Jekyll, something that looked like&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;▾ &amp;lt;root&amp;gt;/
+    ▾ images/
+        logo.png
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;should become&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;▾ &amp;lt;root&amp;gt;/
+    ▾ static/
+        ▾ images/
+            logo.png
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as &lt;code&gt;CNAME&lt;/code&gt;) to be moved to &lt;code&gt;static&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;fix-content&#34;&gt;Fix content&lt;/h2&gt;
+
+&lt;p&gt;Depending on the amount of customization that was done for each post in Jekyll, this step will require more or less effort. There are no hard and fast rules here except that &lt;code&gt;hugo server --watch&lt;/code&gt; and the Hugo Academic example site are your friends. Test your changes and fix errors as needed.&lt;/p&gt;
+
+&lt;h2 id=&#34;publish&#34;&gt;Publish&lt;/h2&gt;
+
+&lt;p&gt;The default is for Jekyll to publish the website to a &lt;code&gt;_site&lt;/code&gt; directory, whereas Hugo publishes to a &lt;code&gt;public&lt;/code&gt; directory.&lt;/p&gt;
+
+&lt;h2 id=&#34;a-practical-example&#34;&gt;A practical example&lt;/h2&gt;
+
+&lt;p&gt;Alexandre Normand migrated his website from Jekyll to Hugo in less than a day. You can see all his changes by looking at this GitHub &lt;a href=&#34;https://github.com/alexandre-normand/alexandre-normand/compare/869d69435bd2665c3fbf5b5c78d4c22759d7613a...b7f6605b1265e83b4b81495423294208cc74d610&#34; target=&#34;_blank&#34;&gt;diff&lt;/a&gt;. However, bear in mind that this example is &lt;strong&gt;not specific to the Academic theme nor does it use the latest version of Hugo&lt;/strong&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

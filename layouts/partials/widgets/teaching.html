@@ -1,0 +1,43 @@
+<!-- FLIP: MODIFIED TEACHING WIDGET -->
+{{ $ := .root }}
+{{ $page := .page }}
+
+<!-- Custom widget -->
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>{{ with $page.Title }}{{ . | markdownify }}{{ end }}</h1>
+    {{ with $page.Params.subtitle }}<p>{{ . | markdownify }}</p>{{ end }}
+  </div>
+  <div class="col-xs-12 col-md-8">
+
+    <p>{{ $page.Params.here_are_my_classes }}</p>
+    <p>
+      {{ range first $.Site.Params.numitems (where $.Data.Pages "Type" "teaching") }}
+      <i class="fa fa-book"></i>&ensp;
+      <a href="{{ .Permalink }}">
+        <b>{{ .Title }}</b>
+      </a>
+      {{ .Params.subtitle }}
+      <span class="comment">
+        ( {{ .Params.term }} {{ .Params.year }} )
+      </span>
+      <br />
+      {{ end }}
+    </p>
+
+    {{ $page.Content }}
+  </div>
+</div>
+
+
+<!--
+.Permalink
+title = "P231"
+subtitle = "Methods of Theoretical Physics"
+type = "teaching"
+layout = "class"
+summary = "A crash course in mathematical methods for graduate school."
+term = "Fall"
+year = "2017"
+university = "UCR"
+instructor = "Prof. Flip Tanedo" -->

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications on Flip Tanedo @ UCR</title>
+    <link>http://physics.ucr.edu/~flip/publication/</link>
+    <description>Recent content in Publications on Flip Tanedo @ UCR</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Flip Tanedo</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/~flip/publication/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Dark Matter Capture</title>
+      <link>http://physics.ucr.edu/~flip/publication/capture/</link>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://physics.ucr.edu/~flip/publication/capture/</guid>
+      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>New Physics in Nuclear Transitions</title>
+      <link>http://physics.ucr.edu/~flip/publication/beryllium/</link>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://physics.ucr.edu/~flip/publication/beryllium/</guid>
+      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,45 @@
+{{ $page := .page }}
+
+<!-- Custom widget -->
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>{{ with $page.Title }}{{ . | markdownify }}{{ end }}</h1>
+    {{ with $page.Params.subtitle }}<p>{{ . | markdownify }}</p>{{ end }}
+
+    <p> <!-- Link to group -->
+      <a class="btn btn-primary btn-outline btn-xs" href="{{ $page.Params.group_site }}">
+        {{ $page.Params.group_name }}
+      </a>
+    </p>
+
+
+
+  </div>
+  <div class="col-xs-12 col-md-8">
+    <!-- {{ $page.Content }} -->
+    {{ $page.Params.research_blurb }}
+
+
+    <!-- FLIP: STUDENTS -->
+    <h3>{{ $page.Params.student_title }}</h3>
+        <div class="row">
+              {{ with $page.Params.mygroup }}
+                <ul class="ul-students">
+                  {{ range .students }}
+                  <li class="ul-students" title="{{ .name }}, {{ .position }}">
+                    <a href="{{ .website }}"><img class="studentpic" src="{{ .photo }}"></a>
+                  </li>
+                  {{ end }}
+                </ul>
+              {{ end }}
+          </div>
+          <!-- <p class="comment"> --><p>
+          {{ $page.Params.recruit_blurb }}
+          </p>
+    <!--  END: STUDENTS -->
+
+
+<h3>{{ $page.Params.research_title }}</h3>
+{{ $page.Content }}
+
+</div>
