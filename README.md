@@ -1,6 +1,8 @@
 # FlipWebsite2017
 My Personal Website based on the Hugo Academic theme
 
+As of June 2018, I started over again from a clean version of Hugo Academic. This repo is now obsolete. My current site is now based on [Academic-Flip](https://github.com/fliptanedo/academic-flip).
+
 As of 3 September 2017, the site is hosted at [http://physics.ucr.edu/~flip/](http://physics.ucr.edu/~flip/).
 
 **Note:** I am not sure how dilligent I will be with keeping this repository updated as I update my content. I also have not cleaned this up into a modular variant of Cushen's Academic theme. Eventually this may be a nice side project to propose features for Cushen's theme. However, I may not have time to get around to this in the near future.
